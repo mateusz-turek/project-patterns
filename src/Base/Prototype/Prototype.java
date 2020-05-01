@@ -2,8 +2,10 @@ package Base.Prototype;
 
 public class Prototype implements Cloneable {
 
+    // Declaration of cloneable interface
+
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone() {
         try {
             //  longer
             //  Prototype clone = (Prototype) super.clone();

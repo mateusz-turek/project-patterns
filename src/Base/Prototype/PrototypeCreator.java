@@ -1,5 +1,5 @@
 package Base.Prototype;
-
+    // create object by cloning prototype, client requests the body of prototype;
     public class PrototypeCreator {
 
         private Prototype prototype;

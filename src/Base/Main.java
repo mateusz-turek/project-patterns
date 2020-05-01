@@ -48,6 +48,7 @@ public class Main {
         System.out.println(o == o2);
 
         System.out.println("===========================Prototype=============================");
+
         Prototype tempPrototype;
         Prototype prototype = new InnerPrototype();
         PrototypeCreator prototypeCreator = new PrototypeCreator(prototype);
