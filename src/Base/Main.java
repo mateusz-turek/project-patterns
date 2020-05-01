@@ -48,13 +48,16 @@ public class Main {
         System.out.println(o == o2);
 
         System.out.println("===========================Prototype=============================");
-
+        System.out.println( "Prototype pattern: " + "\n" +
+                "Prototype - Declaration of cloneable interface"+ "\n" +
+                 "class InnerPrototype extends Prototype -  implementation of WHOLE cloning process" + "\n"+
+                    "PrototypeCreator -  client requests the body of prototype in order to clone and create object based on it" );
         Prototype tempPrototype;
         Prototype prototype = new InnerPrototype();
         PrototypeCreator prototypeCreator = new PrototypeCreator(prototype);
-        for (int i = 0; i < 100; i++) {
+
             tempPrototype = prototypeCreator.makePrototype();
             System.out.println(tempPrototype);
-        }
+
     }
 }

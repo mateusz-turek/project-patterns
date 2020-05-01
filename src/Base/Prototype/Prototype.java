@@ -4,6 +4,7 @@ public class Prototype implements Cloneable {
 
     // Declaration of cloneable interface
 
+
     @Override
     protected Object clone() {
         try {
