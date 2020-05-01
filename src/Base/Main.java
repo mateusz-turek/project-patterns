@@ -1,11 +1,15 @@
 package Base;
 
+import Base.Prototype.InnerPrototype;
+import Base.Prototype.Prototype;
+import Base.Prototype.PrototypeCreator;
 import Base.Singleton.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         System.out.println("========================================SINGLETON========================================");
+
 
         SingletonI sI;
         SingletonI sII;
@@ -30,9 +34,9 @@ public class Main {
         System.out.println(singletonLazyLoadingI);
         System.out.println(singletonLazyLoadingII);
 
-        System.out.println(sI==sII);
-        System.out.println(sIIa==sIIb);
-        System.out.println(singletonLazyLoadingI==singletonLazyLoadingII);
+        System.out.println(sI == sII);
+        System.out.println(sIIa == sIIb);
+        System.out.println(singletonLazyLoadingI == singletonLazyLoadingII);
 
         SingletonMultiThreading.create();
 
@@ -41,7 +45,15 @@ public class Main {
 
         System.out.println(o);
         System.out.println(o2);
-        System.out.println(o==o2);
+        System.out.println(o == o2);
 
+        System.out.println("===========================Prototype=============================");
+        Prototype tempPrototype;
+        Prototype prototype = new InnerPrototype();
+        PrototypeCreator prototypeCreator = new PrototypeCreator(prototype);
+        for (int i = 0; i < 100; i++) {
+            tempPrototype = prototypeCreator.makePrototype();
+            System.out.println(tempPrototype);
+        }
     }
 }
