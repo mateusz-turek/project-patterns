@@ -1,5 +1,6 @@
 package Base;
 
+import Base.Builder.InnerHumanBuilder;
 import Base.Prototype.InnerPrototype;
 import Base.Prototype.Prototype;
 import Base.Prototype.PrototypeCreator;
@@ -48,16 +49,32 @@ public class Main {
         System.out.println(o == o2);
 
         System.out.println("===========================Prototype=============================");
-        System.out.println( "Prototype pattern: " + "\n" +
-                "Prototype - Declaration of cloneable interface"+ "\n" +
-                 "class InnerPrototype extends Prototype -  implementation of WHOLE cloning process" + "\n"+
-                    "PrototypeCreator -  client requests the body of prototype in order to clone and create object based on it" );
+        System.out.println("Prototype pattern: " + "\n" +
+                "Prototype - Declaration of cloneable interface" + "\n" +
+                "class InnerPrototype extends Prototype -  implementation of WHOLE cloning process" + "\n" +
+                "PrototypeCreator -  client requests the body of prototype in order to clone and create object based on it");
         Prototype tempPrototype;
         Prototype prototype = new InnerPrototype();
         PrototypeCreator prototypeCreator = new PrototypeCreator(prototype);
 
-            tempPrototype = prototypeCreator.makePrototype();
-            System.out.println(tempPrototype);
+        tempPrototype = prototypeCreator.makePrototype();
+        System.out.println(tempPrototype);
 
+        System.out.println("===========================Builder=============================");
+        InnerHumanBuilder ihb = new InnerHumanBuilder.Builder()
+                .age(20)
+                .name("Sample Name1")
+                .height(1.80)
+                .build();
+
+        InnerHumanBuilder ihb2 = new InnerHumanBuilder.Builder()
+                .age(10)
+                .name("Sample Name2")
+                .height(1.20)
+                .build();
+
+        System.out.println(ihb.toString());
+        System.out.println(ihb2.toString());
+        System.out.println(ihb==ihb2); //memory
     }
 }
