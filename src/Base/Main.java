@@ -51,6 +51,7 @@ public class Main {
         System.out.println(o);
         System.out.println(o2);
         System.out.println(o == o2);
+        System.out.println("===========================SingletonEndsHere=============================");
 
         System.out.println("===========================Prototype=============================");
         System.out.println("Prototype pattern: " + "\n" +
@@ -63,6 +64,7 @@ public class Main {
 
         tempPrototype = prototypeCreator.makePrototype();
         System.out.println(tempPrototype);
+        System.out.println("===========================PrototypeEndsHere=============================");
 
         System.out.println("===========================Builder=============================");
         InnerHumanBuilder ihb = new InnerHumanBuilder.Builder()
@@ -80,6 +82,7 @@ public class Main {
         System.out.println(ihb.toString());
         System.out.println(ihb2.toString());
         System.out.println(ihb==ihb2); //memory
+        System.out.println("===========================BuilderEndsHere=============================");
 
         System.out.println("===========================Factory=============================");
         HumanFactory humanFactory = new HumanFactory();
@@ -94,5 +97,6 @@ public class Main {
         }else {
             System.out.println("wrong input");
         }
+        System.out.println("===========================FactoryEndsHere=============================");
     }
 }
