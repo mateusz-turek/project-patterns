@@ -1,10 +1,14 @@
 package Base;
 
 import Base.Builder.InnerHumanBuilder;
+import Base.Factory.Human;
+import Base.Factory.HumanFactory;
 import Base.Prototype.InnerPrototype;
 import Base.Prototype.Prototype;
 import Base.Prototype.PrototypeCreator;
 import Base.Singleton.*;
+
+import java.util.Scanner;
 
 public class Main {
 
@@ -76,5 +80,19 @@ public class Main {
         System.out.println(ihb.toString());
         System.out.println(ihb2.toString());
         System.out.println(ihb==ihb2); //memory
+
+        System.out.println("===========================Factory=============================");
+        HumanFactory humanFactory = new HumanFactory();
+        Human human = null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Tom | Kate");
+        human = humanFactory.makeHuman(scanner.next());
+        if (null!= human) {
+            System.out.println(human);
+            human.doStuff();
+            scanner.close();
+        }else {
+            System.out.println("wrong input");
+        }
     }
 }
