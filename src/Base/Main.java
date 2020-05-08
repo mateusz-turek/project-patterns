@@ -7,6 +7,9 @@ import Base.Prototype.InnerPrototype;
 import Base.Prototype.Prototype;
 import Base.Prototype.PrototypeCreator;
 import Base.Singleton.*;
+import Base.Strategy.FormatterContext;
+import Base.Strategy.LowerCaseFormatter;
+import Base.Strategy.UpperCaseFormatter;
 
 import java.util.Scanner;
 
@@ -98,5 +101,13 @@ public class Main {
             System.out.println("wrong input");
         }
         System.out.println("===========================FactoryEndsHere=============================");
+        System.out.println("===========================Strategy=============================");
+        FormatterContext format = new FormatterContext();
+        format.set(new UpperCaseFormatter());
+        assert human != null;
+        format.print(human.getName());
+        format.set(new LowerCaseFormatter());
+        format.print(human.getName());
+        System.out.println("===========================StrategyEndsHere=============================");
     }
 }
