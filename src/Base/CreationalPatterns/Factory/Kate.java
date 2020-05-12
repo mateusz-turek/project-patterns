@@ -1,4 +1,4 @@
-package Base.Factory;
+package Base.CreationalPatterns.Factory;
 
 public class Kate extends Human{
 

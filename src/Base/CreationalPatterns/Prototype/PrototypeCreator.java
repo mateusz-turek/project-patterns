@@ -1,4 +1,4 @@
-package Base.Prototype;
+package Base.CreationalPatterns.Prototype;
     // create object by cloning prototype, client requests the body of prototype;
 
     public class PrototypeCreator {

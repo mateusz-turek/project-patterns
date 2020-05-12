@@ -1,4 +1,4 @@
-package Base.Singleton;
+package Base.CreationalPatterns.Singleton;
 
 public class SingletonNoReflection {
 

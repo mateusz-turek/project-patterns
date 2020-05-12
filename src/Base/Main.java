@@ -1,15 +1,16 @@
 package Base;
 
-import Base.Builder.InnerHumanBuilder;
-import Base.Factory.Human;
-import Base.Factory.HumanFactory;
-import Base.Prototype.InnerPrototype;
-import Base.Prototype.Prototype;
-import Base.Prototype.PrototypeCreator;
-import Base.Singleton.*;
-import Base.Strategy.FormatterContext;
-import Base.Strategy.LowerCaseFormatter;
-import Base.Strategy.UpperCaseFormatter;
+import Base.CommandPatterns.State.Dog;
+import Base.CreationalPatterns.Builder.InnerHumanBuilder;
+import Base.CreationalPatterns.Factory.Human;
+import Base.CreationalPatterns.Factory.HumanFactory;
+import Base.CreationalPatterns.Prototype.InnerPrototype;
+import Base.CreationalPatterns.Prototype.Prototype;
+import Base.CreationalPatterns.Prototype.PrototypeCreator;
+import Base.CreationalPatterns.Singleton.*;
+import Base.CommandPatterns.Strategy.FormatterContext;
+import Base.CommandPatterns.Strategy.LowerCaseFormatter;
+import Base.CommandPatterns.Strategy.UpperCaseFormatter;
 
 import java.util.Scanner;
 
@@ -109,5 +110,19 @@ public class Main {
         format.set(new LowerCaseFormatter());
         format.print(human.getName());
         System.out.println("===========================StrategyEndsHere=============================");
+        System.out.println("===========================State=============================");
+        Dog dog = new Dog();
+
+        dog.printStatus();
+
+        dog.nextState();
+        dog.printStatus();
+
+        dog.nextState();
+        dog.printStatus();
+
+        dog.nextState();
+        dog.printStatus();
+        System.out.println("===========================StateEndsHere=============================");
     }
 }
