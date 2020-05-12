@@ -1,4 +1,4 @@
-package Base.Strategy;
+package Base.CommandPatterns.Strategy;
 
 public class LowerCaseFormatter implements ChangeText {
 

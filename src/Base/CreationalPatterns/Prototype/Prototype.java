@@ -1,4 +1,4 @@
-package Base.Prototype;
+package Base.CreationalPatterns.Prototype;
 
 public class Prototype implements Cloneable {
 

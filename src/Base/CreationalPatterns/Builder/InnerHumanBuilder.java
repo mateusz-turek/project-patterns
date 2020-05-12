@@ -1,4 +1,4 @@
-package Base.Builder;
+package Base.CreationalPatterns.Builder;
 
 public class InnerHumanBuilder {
 
