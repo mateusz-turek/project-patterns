@@ -11,6 +11,9 @@ import Base.CreationalPatterns.Singleton.*;
 import Base.CommandPatterns.Strategy.FormatterContext;
 import Base.CommandPatterns.Strategy.LowerCaseFormatter;
 import Base.CommandPatterns.Strategy.UpperCaseFormatter;
+import Base.StructuralPatterns.Wrapper.DataWriter;
+import Base.StructuralPatterns.Wrapper.NewWriter;
+import Base.StructuralPatterns.Wrapper.Writer;
 
 import java.util.Scanner;
 
@@ -124,5 +127,10 @@ public class Main {
         dog.nextState();
         dog.printStatus();
         System.out.println("===========================StateEndsHere=============================");
+        System.out.println("===========================Adapter=============================");
+        Writer writer = new DataWriter();
+        writer.save("Super value");
+
+        System.out.println("===========================AdapterEndsHere=============================");
     }
 }
