@@ -11,9 +11,12 @@ import Base.CreationalPatterns.Singleton.*;
 import Base.CommandPatterns.Strategy.FormatterContext;
 import Base.CommandPatterns.Strategy.LowerCaseFormatter;
 import Base.CommandPatterns.Strategy.UpperCaseFormatter;
-import Base.StructuralPatterns.Wrapper.DataWriter;
-import Base.StructuralPatterns.Wrapper.NewWriter;
-import Base.StructuralPatterns.Wrapper.Writer;
+import Base.StructuralPatterns.Adapter.DataWriter;
+import Base.StructuralPatterns.Adapter.Writer;
+import Base.StructuralPatterns.Decorator.Component;
+import Base.StructuralPatterns.Decorator.ComponentImplementation.ConcreteComponent;
+import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
+import Base.StructuralPatterns.Decorator.Decorator.Decorator;
 
 import java.util.Scanner;
 
@@ -132,5 +135,17 @@ public class Main {
         writer.save("Super value");
 
         System.out.println("===========================AdapterEndsHere=============================");
+        System.out.println("===========================Decorator=============================");
+        ConcreteComponent component =  new ConcreteComponent("Name");
+        System.out.println(component.getName());
+
+        ConcreteDecoratorA decoratorA = new ConcreteDecoratorA(component);
+        decoratorA.addChar();
+        System.out.println(decoratorA.getComponent().getName());
+
+        component = (ConcreteComponent) decoratorA.getComponent();
+        System.out.println(component.getName());
+        System.out.println("===========================DecoratorEndsHere=============================");
+
     }
 }
