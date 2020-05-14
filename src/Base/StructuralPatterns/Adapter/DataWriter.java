@@ -1,4 +1,4 @@
-package Base.StructuralPatterns.Wrapper;
+package Base.StructuralPatterns.Adapter;
 
 public class DataWriter implements Writer {
     @Override

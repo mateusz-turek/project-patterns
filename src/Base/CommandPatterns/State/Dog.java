@@ -1,5 +1,7 @@
 package Base.CommandPatterns.State;
 
+import java.util.ArrayList;
+
 public class Dog {
 
     private DogState state = new WalkState();
