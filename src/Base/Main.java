@@ -17,6 +17,7 @@ import Base.StructuralPatterns.Decorator.Component;
 import Base.StructuralPatterns.Decorator.ComponentImplementation.ConcreteComponent;
 import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
 import Base.StructuralPatterns.Decorator.Decorator.Decorator;
+import Base.StructuralPatterns.Facade.Facade;
 
 import java.util.Scanner;
 
@@ -146,6 +147,13 @@ public class Main {
         component = (ConcreteComponent) decoratorA.getComponent();
         System.out.println(component.getName());
         System.out.println("===========================DecoratorEndsHere=============================");
+
+        System.out.println("===========================Facade=============================");
+        Facade facade = Facade.getInstance();
+        facade.shapeMaker.drawSquare();
+        facade.shapeMaker.drawRectangle();
+        facade.shapeMaker.drawCircle();
+        System.out.println("===========================FacadeEndsHere=============================");
 
     }
 }
