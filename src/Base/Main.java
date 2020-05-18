@@ -13,6 +13,10 @@ import Base.CommandPatterns.Strategy.LowerCaseFormatter;
 import Base.CommandPatterns.Strategy.UpperCaseFormatter;
 import Base.StructuralPatterns.Adapter.DataWriter;
 import Base.StructuralPatterns.Adapter.Writer;
+import Base.StructuralPatterns.Composite.Composite;
+import Base.StructuralPatterns.Composite.Department;
+import Base.StructuralPatterns.Composite.FinancialDepartment;
+import Base.StructuralPatterns.Composite.SalesDepartment;
 import Base.StructuralPatterns.Decorator.Component;
 import Base.StructuralPatterns.Decorator.ComponentImplementation.ConcreteComponent;
 import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
@@ -154,6 +158,21 @@ public class Main {
         facade.shapeMaker.drawRectangle();
         facade.shapeMaker.drawCircle();
         System.out.println("===========================FacadeEndsHere=============================");
+
+        System.out.println("===========================Composite=============================");
+        Department salesDepartment = new SalesDepartment(
+                1, "Sales department");
+        Department financialDepartment = new FinancialDepartment(
+                2, "Financial department");
+
+        Composite headDepartment = new Composite(
+                3, "Head department");
+
+        headDepartment.addDepartment(salesDepartment);
+        headDepartment.addDepartment(financialDepartment);
+
+        headDepartment.printDepartmentName();
+        System.out.println("===========================CompositeEndsHere=============================");
 
     }
 }
