@@ -13,6 +13,9 @@ import Base.CommandPatterns.Strategy.LowerCaseFormatter;
 import Base.CommandPatterns.Strategy.UpperCaseFormatter;
 import Base.StructuralPatterns.Adapter.DataWriter;
 import Base.StructuralPatterns.Adapter.Writer;
+import Base.StructuralPatterns.Bridge.Color.Blue;
+import Base.StructuralPatterns.Bridge.Color.Green;
+import Base.StructuralPatterns.Bridge.Square;
 import Base.StructuralPatterns.Composite.Composite;
 import Base.StructuralPatterns.Composite.Department;
 import Base.StructuralPatterns.Composite.FinancialDepartment;
@@ -23,6 +26,7 @@ import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
 import Base.StructuralPatterns.Decorator.Decorator.Decorator;
 import Base.StructuralPatterns.Facade.Facade;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -174,5 +178,11 @@ public class Main {
         headDepartment.printDepartmentName();
         System.out.println("===========================CompositeEndsHere=============================");
 
+        System.out.println("===========================Bridge=============================");
+        Square square1 = new Square(new Blue());
+        Square square2 = new Square(new Green());
+        System.out.println(square1.draw());
+        System.out.println(square2.draw());
+        System.out.println("===========================BridgeEndsHere=============================");
     }
 }
