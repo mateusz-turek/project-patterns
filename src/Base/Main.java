@@ -25,6 +25,9 @@ import Base.StructuralPatterns.Decorator.ComponentImplementation.ConcreteCompone
 import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
 import Base.StructuralPatterns.Decorator.Decorator.Decorator;
 import Base.StructuralPatterns.Facade.Facade;
+import Base.StructuralPatterns.Proxy.Name;
+import Base.StructuralPatterns.Proxy.Person;
+import Base.StructuralPatterns.Proxy.ProxyPerson;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -184,5 +187,16 @@ public class Main {
         System.out.println(square1.draw());
         System.out.println(square2.draw());
         System.out.println("===========================BridgeEndsHere=============================");
+
+        System.out.println("===========================Proxy=============================");
+        Name name1 = new Person();
+        System.out.println(name1.getName());
+        System.out.println(name1.getName());
+
+        name1 = new ProxyPerson();
+        System.out.println(name1.getName());
+        System.out.println(name1.getName());
+        System.out.println("===========================ProxyEndsHere=============================");
+
     }
 }
