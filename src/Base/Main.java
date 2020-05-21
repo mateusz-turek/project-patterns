@@ -25,6 +25,7 @@ import Base.StructuralPatterns.Decorator.ComponentImplementation.ConcreteCompone
 import Base.StructuralPatterns.Decorator.Decorator.ConcreteDecoratorA;
 import Base.StructuralPatterns.Decorator.Decorator.Decorator;
 import Base.StructuralPatterns.Facade.Facade;
+import Base.StructuralPatterns.Flyweight.FlyweightPatternDemo;
 import Base.StructuralPatterns.Proxy.Name;
 import Base.StructuralPatterns.Proxy.Person;
 import Base.StructuralPatterns.Proxy.ProxyPerson;
@@ -198,5 +199,8 @@ public class Main {
         System.out.println(name1.getName());
         System.out.println("===========================ProxyEndsHere=============================");
 
+        System.out.println("===========================Flyweight=============================");
+        FlyweightPatternDemo.main(args);
+        System.out.println("===========================FlyweightEndsHere=============================");
     }
 }
