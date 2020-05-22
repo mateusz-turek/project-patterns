@@ -1,5 +1,6 @@
 package Base;
 
+import Base.CommandPatterns.Interpreter.InterpreterPatternDemo;
 import Base.CommandPatterns.State.Dog;
 import Base.CreationalPatterns.Builder.InnerHumanBuilder;
 import Base.CreationalPatterns.Factory.Human;
@@ -202,5 +203,9 @@ public class Main {
         System.out.println("===========================Flyweight=============================");
         FlyweightPatternDemo.main(args);
         System.out.println("===========================FlyweightEndsHere=============================");
+
+        System.out.println("===========================Interpreter=============================");
+        InterpreterPatternDemo.main(args);
+        System.out.println("===========================InterpreterEndsHere=============================");
     }
 }
